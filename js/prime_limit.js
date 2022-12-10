@@ -62,9 +62,13 @@ but.onclick=function()
 		output.style.color="teal";
 		output.style.margin="10px";
 		cflex.appendChild(output);
-		if(number>2)
+		if(number==1)
 		{
-			for(i=2;i<number;i++)
+			bool=false;
+		}
+		else if(number>1)
+		{
+			for(i=2;i<number/2;i++)
 			{
 				if(number%i==0)
 				{
@@ -93,6 +97,6 @@ clear.style.backgroundColor="aqua";
 clear.onclick=function()
 {
 	document.getElementById('input').value = ' ';
-	document.getElementById('cflex').innerHTML = ' ';
+	document.getElementById('cflex').remove();
 }
 
